@@ -53,7 +53,7 @@ services:
     restart: unless-stopped
     environment:
       - RETHINKDB_PORT_28015_TCP
-    command: stf processor --connect-app-dealer tcp://triproxy:7160 --connect-dev-dealer tcp://dev-triproxy:7260
+    command: stf processor --connect-app-dealer tcp://triproxy:7160 --connect-dev-dealer tcp://dev-triproxy:7260 --allow-remote
     depends_on:
       - rethinkdb
       - triproxy
